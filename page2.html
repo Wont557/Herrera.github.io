@@ -1,0 +1,130 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+        /* Include the CSS variables for color customization */
+        :root {
+            --background-color-light: #94ea94; /* Light green background color */
+            --text-color-light: #000000; /* Light text color */
+            --background-color-dark: #003300; /* Dark green background color */
+            --text-color-dark: #138e00; /* Dark text color */
+            --container-background: rgba(255, 154, 77, 0.8); /* Container background color */
+            --button-background: #00cc44; /* Verde para los botones */
+            --button-hover-background: #00802b; /* Verde más oscuro al pasar el mouse sobre los botones */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.0s, color 0.0s;
+            background: var(--background-color-light);
+            color: var(--text-color-light);
+        }
+
+        body.dark {
+            background: var(--background-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--container-background);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .recycling-tip {
+            margin-bottom: 20px;
+        }
+
+        .recycling-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .button {
+    width: 96%;
+    padding: 10px 20px;
+    background: var(--button-background);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block; /* Ensures it behaves like a block element and takes up the full width */
+    text-align: center; /* Center the text within the button */
+}
+
+.button:hover {
+    background: var(--button-hover-background);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sustainable Practices</h1>
+        <p>Explore sustainable practices and initiatives related to recycling.</p>
+
+        <div class="recycling-tip">
+            <h2>Tip 1: Separate Materials</h2>
+            <p>Separate recyclable materials such as paper, plastic, glass, and metal. This makes the recycling process more efficient.</p>
+            <img class="recycling-image" src="E-EayEnXoAgJJk4.jpg_large" alt="Recycling Bins">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 2: Check Local Recycling Guidelines</h2>
+            <p>Be aware of your local recycling guidelines. Different regions may have specific rules for recycling different materials.</p>
+            <img class="recycling-image" src="FEfRwqCVEA4k1Hb.jpg_large" alt="Recycling Guidelines">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 3: Reduce Plastic Usage</h2>
+            <p>Avoid single-use plastic items. Opt for reusable alternatives to reduce plastic waste.</p>
+            <img class="recycling-image" src="9-tips-for-reducing-plastic-use-1.jpg" alt="Reduce Plastic">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 4: Recycle Electronics Responsibly</h2>
+            <p>When disposing of electronic devices, recycle them through designated e-waste recycling programs to prevent environmental harm.</p>
+            <img class="recycling-image" src="recycling symbol surrounded by old electronics.jpg" alt="Recycle Electronics">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 5: Compost Organic Waste</h2>
+            <p>Composting organic waste reduces landfill waste and enriches soil. Create a composting system for kitchen scraps and garden waste.</p>
+            <img class="recycling-image" src="HipEFTB1P5cvTQLb1gV9fzNQ2COb8nPX1699382081.jpg" alt="Compost Organic Waste">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 6: Buy Recycled Products</h2>
+            <p>Support the recycling industry by purchasing products made from recycled materials. Look for the recycling symbol on packaging.</p>
+            <img class="recycling-image" src="Recycle_Loop_2023_loop_black-arrows-for-light-background-1024x1024.png" alt="Buy Recycled Products">
+        </div>
+
+        <div class="recycling-tip">
+            <h2>Tip 7: Participate in Community Cleanup Events</h2>
+            <p>Join local community cleanup events to contribute to a cleaner environment. Properly dispose of collected waste.</p>
+            <img class="recycling-image" src="clean-it-up-textimage_4x3.avif" alt="Community Cleanup Events">
+
+            <a href="web.html" class="button">Return to Home page</a>
+        </div>
+
+        <!-- Add more recycling tips and images as needed -->
+
+    </div>
+
+    <script>
+        // Function to toggle the theme
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>

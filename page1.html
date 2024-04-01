@@ -1,0 +1,96 @@
+<!-- page1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        /* Include the CSS variables for color customization */
+        :root {
+            --background-color-light: #94ea94; /* Light green background color */
+            --text-color-light: #000000; /* Light text color */
+            --background-color-dark: #003300; /* Dark green background color */
+            --text-color-dark: #138e00; /* Dark text color */
+            --container-background: rgba(255, 154, 77, 0.8); /* Container background color */
+            --button-background: #00cc44; /* Verde para los botones */
+            --button-hover-background: #00802b; /* Verde más oscuro al pasar el mouse sobre los botones */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.0s, color 0.0s;
+            background: var(--background-color-light) url('descarga.gif') center/cover no-repeat;
+            color: var(--text-color-light);
+        }
+
+        body.dark {
+            background: var(--background-color-dark) url('descarga2.gif') center/cover no-repeat;
+            color: var(--text-color-dark);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--container-background);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .button {
+    width: 96%;
+    padding: 10px 20px;
+    background: var(--button-background);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block; /* Ensures it behaves like a block element and takes up the full width */
+    text-align: center; /* Center the text within the button */
+}
+
+.button:hover {
+    background: var(--button-hover-background);
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Objective 12: Responsible Consumption and Production</h1>
+        <img class="image" src="12obj.png" alt="Objective Image">
+
+        <p>Ensure sustainable consumption and production patterns.</p>
+        
+        <p><strong>Efficient Resource Use:</strong> Mexico has implemented various strategies to optimize natural resource use, including promoting sustainable agriculture, water conservation, and energy efficiency in industries.</p>
+        <img class="image" src="4.1_efficient_use_of_resources.jpg" alt="Resource Use Image">
+
+        <p><strong>Reducing Environmental Impact:</strong> Initiatives in Mexico focus on reducing the environmental impact of production processes through the adoption of eco-friendly technologies and practices. Notable achievements include a 20% reduction in carbon emissions since 2010.</p>
+        <img class="image" src="earth-with-hand.jpg" alt="Environmental Impact Image">
+
+        <p><strong>Sustainable Supply Chains:</strong> Mexico encourages businesses to adopt sustainable practices in their supply chains through government incentives and certifications. Ethical sourcing and fair trade initiatives are also promoted.</p>
+        <img class="image" src="aa.jpg" alt="Environmental Impact Image">
+        <p><strong>Statistics:</strong> Mexico has achieved a 30% reduction in overall waste production since 2015. Approximately 60% of businesses in the country have embraced sustainable production practices.</p>
+        <img class="image" src="economics1.jpg" alt="Environmental Impact Image">
+        <p><strong>Initiatives:</strong> A prominent initiative in Mexico is the "Green Production Program," supporting businesses in adopting eco-friendly practices. Additionally, the "Zero Waste Campaign" aims to minimize landfill waste through recycling and waste reduction measures.</p>
+        <img class="image" src="un_logo.png" alt="Environmental Impact Image">
+        <!-- Additional Information -->
+        <p><strong>Renewable Energy Integration:</strong> The country is making strides in integrating renewable energy sources into production processes, aiming to reduce reliance on non-renewable resources and decrease carbon footprint.</p>
+        <img class="image" src="renewable-energy-integration-25929.jpg" alt="Environmental Impact Image">
+
+        <a href="web.html" class="button">Return to Home page</a>
+    </div>
+    </div>
+    
+    </script>
+</body>
+</html>

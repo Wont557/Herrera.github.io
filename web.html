@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Website</title>
+    <style>
+        .additional-content {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .text-box {
+            flex: 1;
+            padding: 20px;
+            background-color: var(--container-background);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .text-box.dark-mode {
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.375);
+        }
+
+        .text-box h2 {
+            color: var(--text-color-light);
+        }
+
+        .text-box p {
+            color: #000000;
+        }
+
+        .text-box ul {
+            color: var(--text-color-light);
+        }
+
+        .text-box.dark-mode ul {
+            color: var(--text-color-dark);
+        }
+
+        .error-message {
+            text-align: center;
+            color: red;
+            margin-top: 50px;
+        }
+
+        /* CSS Variables for color customization */
+        :root {
+            --background-color-light: #94ea94; /* Verde claro para el fondo */
+            --text-color-light: #000000;
+            --background-color-dark: #003300; /* Verde oscuro para el fondo en modo oscuro */
+            --text-color-dark: #138e00;
+            --container-background: rgba(255, 154, 77, 0.8);
+            --highlight-background: #00cc44; /* Verde más intenso para resaltar */
+            --button-background: #00cc44; /* Verde para los botones */
+            --button-hover-background: #00802b; /* Verde más oscuro al pasar el mouse sobre los botones */
+            --quote-color: #004d00; /* Verde más oscuro para las citas */
+        }
+
+        /* General styling for body and layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            background: var(--background-color-light) url('descarga.gif') center/cover no-repeat;
+            color: var(--text-color-light);
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--container-background);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        h1, h2 {
+            color: var(--text-color-light);
+        }
+
+        /* Paragraph styles */
+        p {
+            color: #000000;
+        }
+
+        /* Button styles */
+        .button {
+            padding: 10px 20px;
+            background: var(--button-background);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: var(--button-hover-background);
+        }
+
+        /* Dark theme styles */
+        body.dark {
+            background: var(--background-color-dark) url('descarga2.gif') center/cover no-repeat;
+            color: var(--text-color-dark);
+        }
+
+        body.dark .container {
+            background: rgba(34, 34, 34, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark h1, body.dark h2 {
+            color: var(--text-color-dark);
+        }
+
+        body.dark p {
+            color: #ffffff;
+        }
+
+        /* Highlighted section styles */
+        .highlight {
+            background: var(--highlight-background);
+            padding: 10px;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Quote styles */
+        .quote {
+            font-style: italic;
+            color: var(--quote-color);
+        }
+
+        /* Game information section styles */
+        .game-info {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .game-info img {
+            max-width: 200px;
+            border-radius: 5px;
+            transition: transform 0.3s, margin 0.3s;
+        }
+
+        .game-info img:hover {
+            transform: scale(1.3);
+            margin: 0 auto;
+        }
+
+        .game-info-text {
+            width: 70%;
+        }
+
+        .game-info-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .game-info-description {
+            font-size: 16px;
+        }
+
+        /* Bottom section styles */
+        .credits {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .credits span {
+            font-weight: bold;
+        }
+
+        /* Navigation box styling */
+.navigation-box {
+    background-color: var(--container-background);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation-box.dark-mode {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.375);
+}
+
+.navigation-box h2 {
+    color: var(--text-color-light);
+}
+
+.navigation-box a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation-box.dark-mode a {
+    color: var(--text-color-dark);
+}
+
+.navigation-box a:hover {
+    background-color: var(--highlight-background);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Button to pause all audio -->
+<button class="button" onclick="pauseAllAudio()">Pause All Audio</button>
+    
+    <!-- Background music for light theme -->
+<audio id="backgroundMusicLight" preload="auto" loop>
+    <source src="mzre_field1.ogg" type="audio/ogg">
+</audio>
+
+<!-- Background music for dark theme -->
+<audio id="backgroundMusicDark" preload="auto" loop>
+    <source src="MZre_Dungeon6.ogg" type="audio/ogg">
+</audio>
+
+    <button class="button" onclick="toggleBackgroundMusic()">Toggle Background Music</button>
+
+    <div class="container">
+        <h1>ACCIONES PARA UN FUTURO SUSTENTABLE</h1>
+        <p>Bienvenido a nuestro sitio dedicado al desarrollo sustentable. Aquí exploramos formas de reducir nuestra huella de carbono y contribuir al bienestar del planeta. Puedes cambiar entre temas de luz y oscuridad, además de explorar sugerencias para adoptar un estilo de vida más sostenible.</p>
+        <button class="button" onclick="toggleTheme()">Cambiar Tema</button>
+        <button class="button" onclick="changeBackground()">Cambiar Fondo</button>
+
+        <h2>Desarrollo Sustentable en Breve</h2>
+        <div class="highlight">
+            <p>El desarrollo sustentable busca equilibrar el crecimiento económico con la protección del medio ambiente y la responsabilidad social. Aprende sobre prácticas sostenibles que benefician a las generaciones presentes y futuras.</p>
+            <p>Únete a nosotros para crear un impacto positivo en el mundo a través de pequeñas acciones diarias.</p>
+        </div>
+
+        <div class="image-between-sections">
+            <img id="dynamicImage" src="forest.jpg" alt="Image Description" style="width: 100%; height: auto;">
+        </div>
+
+        <h2>Proyecto Destacado</h2>
+        <div class="game-info">
+            <div class="game-info-text">
+                <h3 class="game-info-title">EcoHéroes</h3>
+                <p class="game-info-description">EcoHéroes es una aplicación educativa que te desafía a adoptar hábitos sostenibles y aprender sobre la importancia de cuidar nuestro entorno. Conviértete en un EcoHéroe y marca la diferencia.</p>
+                <p class="quote">"Juntos, podemos construir un futuro más verde y saludable."</p>
+            </div>
+            <img src="kerbal-space-program-wide-walking.gif" alt="Imagen del Proyecto" class="game-image" onmouseover="playAudio()">
+        </div>
+
+        <div class="credits">
+            Sitio creado por <span>Wilfredo, David, Lucio</span> y <span>ChatGPT</span>
+        </div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdybXYYaRz4QuR2WY1Q-Uvd70MQ8m-Txk8d45j-aK8Gkj5xyw/viewform?usp=sf_link" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+    </div>
+
+    <div class="additional-content">
+        <div class="text-box">
+            <h2>Recomendaciones para Reducir tu Huella de Carbono</h2>
+            <p>Aquí encontrarás consejos prácticos para reducir tu huella de carbono y contribuir al medio ambiente:</p>
+            <ul>
+                <li>Usa transporte público o comparte viajes.</li>
+                <li>Ahorra energía en casa: apaga luces y electrodomésticos cuando no los uses.</li>
+                <li>Reduce, reutiliza y recicla.</li>
+                <!-- Agrega más recomendaciones según sea necesario -->
+            </ul>
+        </div>
+
+        <div class="text-box">
+            <h2>Tips de Reciclaje</h2>
+            <p>Descubre cómo puedes reciclar de manera efectiva y ayudar a mantener nuestro planeta limpio:</p>
+            <ul>
+                <li>Clasifica tus residuos: papel, plástico, vidrio, orgánicos, etc.</li>
+                <li>Investiga los puntos de reciclaje cercanos.</li>
+                <li>Reutiliza objetos siempre que sea posible.</li>
+                <!-- Agrega más tips de reciclaje según sea necesario -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="navigation-box">
+        <h2>Navigation</h2>
+        <a href="page1.html">Objective 12: Responsible Consumption and Production</a>
+        <a href="page2.html">Sustainable Practices</a>
+
+    <script>
+
+// Function to pause all audio
+function pauseAllAudio() {
+    const backgroundMusicLight = document.getElementById('backgroundMusicLight');
+    const backgroundMusicDark = document.getElementById('backgroundMusicDark');
+
+    // Reset the audio to the beginning and then pause
+    backgroundMusicLight.currentTime = 0;
+    backgroundMusicDark.currentTime = 0;
+
+    backgroundMusicLight.pause();
+    backgroundMusicDark.pause();
+}
+
+// Function to toggle background music
+function toggleBackgroundMusic() {
+    const isDarkMode = document.body.classList.contains('dark');
+    const backgroundMusicLight = document.getElementById('backgroundMusicLight');
+    const backgroundMusicDark = document.getElementById('backgroundMusicDark');
+
+    // Pause all audio before toggling background music
+    pauseAllAudio();
+
+    if (isDarkMode) {
+        if (backgroundMusicDark.paused) {
+            backgroundMusicDark.play(); // Play dark theme music if paused
+        } else {
+            backgroundMusicDark.pause(); // Pause dark theme music if playing
+        }
+    } else {
+        if (backgroundMusicLight.paused) {
+            backgroundMusicLight.play(); // Play light theme music if paused
+        } else {
+            backgroundMusicLight.pause(); // Pause light theme music if playing
+        }
+    }
+}
+
+// Function to update the image based on the theme
+function updateImage() {
+    console.log('updateImage function called');
+    const image = document.getElementById('dynamicImage');
+    const isDarkMode = document.body.classList.contains('dark');
+
+    // Change the image source based on the theme
+    if (isDarkMode) {
+        image.src = 'darkforest.jpg';
+    } else {
+        image.src = 'forest.jpg';
+    }
+}
+
+// Function to update color based on the theme
+function updateColors() {
+    const isDarkMode = document.body.classList.contains('dark');
+    // Update text boxes
+    const textBoxes = document.querySelectorAll('.text-box');
+    textBoxes.forEach(box => {
+        box.classList.toggle('dark-mode', isDarkMode);
+        const textColor = isDarkMode ? '#ffffff' : 'var(--text-color-light)';
+        box.style.color = textColor;
+        const ulElements = box.querySelectorAll('ul');
+        ulElements.forEach(ul => {
+            ul.style.color = isDarkMode ? 'var(--text-color-dark)' : 'var(--text-color-light)';
+        });
+    });
+
+    // Update navigation box
+    const navBox = document.querySelector('.navigation-box');
+    navBox.classList.toggle('dark-mode', isDarkMode);
+    const navBoxTextColor = isDarkMode ? '#ffffff' : 'var(--text-color-light)';
+    navBox.style.color = navBoxTextColor;
+    const anchorElements = navBox.querySelectorAll('a');
+    anchorElements.forEach(anchor => {
+        anchor.style.color = isDarkMode ? 'var(--text-color-dark)' : 'var(--text-color-light)';
+    });
+}
+
+// Function to toggle the theme
+function toggleTheme() {
+    const isDarkMode = document.body.classList.contains('dark');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    // Check if backgroundMusic element exists
+    if (backgroundMusic) {
+        // Pause background music before changing the theme
+        backgroundMusic.pause();
+    }
+
+    document.body.classList.toggle('dark');
+
+    if (isDarkMode) {
+        updateColors(); // Call the function to update colors
+        
+    } else {
+        updateColors(); // Call the function to update text box color
+    }
+    updateImage(); // Call the function to update the image
+    // Change background music based on the next theme
+    toggleBackgroundMusic();
+}
+
+// Preload the audio
+const hoverAudio = new Audio('Cursor2.ogg');
+hoverAudio.load();
+
+// JavaScript function to check if a specific image exists
+function checkImage() {
+    const imageUrl = 'jokerxd.jpg'; // Replace with your image filename
+    const img = new Image();
+
+    img.onload = function () {
+        // Image exists, continue with the page functionality
+        console.log('Image exists!');
+    };
+
+    img.onerror = function () {
+        // Image does not exist, display an error message
+        document.body.innerHTML = '<h1 class="error-message">Error: Image not found!</h1>';
+        playErrorSound();
+    };
+
+    img.src = imageUrl;
+}
+
+// Call the checkImage function when the page loads
+window.onload = checkImage;
+
+// Function to play an error sound
+function playErrorSound() {
+    const errorSound = new Audio('Buzzer3.ogg'); // Replace with your sound file
+    errorSound.play();
+}
+
+// Function to play audio on left mouse click
+function playAudio(event) {
+    // Check if the left mouse button is clicked (button value 0)
+    if (event.button === 0) {
+        hoverAudio.currentTime = 0; // Reset the audio to the beginning
+        hoverAudio.play();
+    }
+}
+
+// Add an event listener to the document for the mousedown event
+document.addEventListener('mousedown', playAudio);
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const textBoxes = document.querySelectorAll('.text-box');
+    textBoxes.forEach(box => box.classList.toggle('dark-mode'));
+}
+
+// Additional functions...
+
+
+    </script>
+</body>
+</html>
